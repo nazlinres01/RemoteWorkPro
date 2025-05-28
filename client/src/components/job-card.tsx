@@ -87,9 +87,11 @@ export default function JobCard({ job }: JobCardProps) {
             />
             <div className="flex-1">
               <div className="flex items-center space-x-2 mb-2">
-                <h3 className="text-xl font-semibold text-slate-800 group-hover:text-primary transition-colors">
-                  {job.title}
-                </h3>
+                <Link href={`/jobs/${job.id}`}>
+                  <h3 className="text-xl font-semibold text-slate-800 group-hover:text-primary transition-colors cursor-pointer">
+                    {job.title}
+                  </h3>
+                </Link>
                 {job.featured && (
                   <Badge variant="secondary" className="bg-purple-100 text-purple-700">
                     Öne Çıkan
@@ -134,7 +136,7 @@ export default function JobCard({ job }: JobCardProps) {
               <div className="flex items-center text-sm text-slate-500 space-x-4">
                 <span className="flex items-center">
                   <Clock className="w-4 h-4 mr-1" />
-                  {formatDate(job.createdAt!)}
+                  {formatDate(job.createdAt || new Date())}
                 </span>
                 <span className="flex items-center">
                   <Users className="w-4 h-4 mr-1" />
