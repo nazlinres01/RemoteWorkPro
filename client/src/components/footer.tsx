@@ -42,20 +42,20 @@ export default function Footer() {
           <div>
             <h3 className="font-semibold mb-4">Platform</h3>
             <ul className="space-y-2 text-slate-300">
-              <li><a href="#jobs" className="hover:text-white transition-colors">İş İlanları</a></li>
-              <li><a href="#companies" className="hover:text-white transition-colors">Şirketler</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Kategoriler</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Kayıtlı İşler</a></li>
+              <li><Link href="/#jobs" className="hover:text-white transition-colors">İş İlanları</Link></li>
+              <li><Link href="/companies" className="hover:text-white transition-colors">Şirketler</Link></li>
+              <li><Link href="/#jobs" className="hover:text-white transition-colors">Kategoriler</Link></li>
+              <li><Link href="/saved-jobs" className="hover:text-white transition-colors">Kayıtlı İşler</Link></li>
             </ul>
           </div>
           
           <div>
             <h3 className="font-semibold mb-4">Destek</h3>
             <ul className="space-y-2 text-slate-300">
-              <li><a href="#" className="hover:text-white transition-colors">Yardım Merkezi</a></li>
-              <li><a href="#contact" className="hover:text-white transition-colors">İletişim</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Gizlilik</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Şartlar</a></li>
+              <li><Link href="/contact" className="hover:text-white transition-colors">Yardım Merkezi</Link></li>
+              <li><Link href="/contact" className="hover:text-white transition-colors">İletişim</Link></li>
+              <li><Link href="/about" className="hover:text-white transition-colors">Gizlilik</Link></li>
+              <li><Link href="/about" className="hover:text-white transition-colors">Şartlar</Link></li>
             </ul>
           </div>
         </div>
