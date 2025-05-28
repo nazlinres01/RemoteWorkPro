@@ -396,7 +396,11 @@ export class MemStorage implements IStorage {
 
   async createJobCategory(insertCategory: InsertJobCategory): Promise<JobCategory> {
     const id = this.currentCategoryId++;
-    const category: JobCategory = { ...insertCategory, id };
+    const category: JobCategory = { 
+      ...insertCategory, 
+      id,
+      count: insertCategory.count ?? 0
+    };
     this.jobCategories.set(id, category);
     return category;
   }
@@ -424,7 +428,7 @@ export class MemStorage implements IStorage {
     // Increment application count
     const job = this.jobs.get(application.jobId);
     if (job) {
-      job.applicationCount++;
+      job.applicationCount = (job.applicationCount ?? 0) + 1;
       this.jobs.set(job.id, job);
     }
     
