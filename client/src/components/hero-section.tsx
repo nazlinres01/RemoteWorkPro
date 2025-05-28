@@ -68,7 +68,7 @@ export default function HeroSection() {
                     </div>
                   </SelectTrigger>
                   <SelectContent>
-                    <SelectItem value="">Tüm Lokasyonlar</SelectItem>
+                    <SelectItem value="all">Tüm Lokasyonlar</SelectItem>
                     <SelectItem value="fully-remote">Tamamen Uzaktan</SelectItem>
                     <SelectItem value="hybrid">Hibrit</SelectItem>
                     <SelectItem value="timezone-specific">Avrupa Saati</SelectItem>

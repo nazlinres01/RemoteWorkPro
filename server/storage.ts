@@ -155,8 +155,7 @@ export class MemStorage implements IStorage {
         currency: "USD",
         skills: ["React", "TypeScript", "Node.js", "GraphQL"],
         featured: false,
-        urgent: false,
-        applicationCount: 23
+        urgent: false
       },
       {
         title: "Product Designer",
@@ -172,8 +171,7 @@ export class MemStorage implements IStorage {
         currency: "USD",
         skills: ["Figma", "UI/UX", "Prototyping", "Design Systems"],
         featured: true,
-        urgent: false,
-        applicationCount: 45
+        urgent: false
       },
       {
         title: "Marketing Manager",
@@ -189,8 +187,7 @@ export class MemStorage implements IStorage {
         currency: "USD",
         skills: ["Digital Marketing", "SEO", "Content Strategy", "Analytics"],
         featured: false,
-        urgent: true,
-        applicationCount: 67
+        urgent: true
       },
       {
         title: "DevOps Engineer",
@@ -206,8 +203,7 @@ export class MemStorage implements IStorage {
         currency: "USD",
         skills: ["AWS", "Docker", "Kubernetes", "Terraform"],
         featured: false,
-        urgent: false,
-        applicationCount: 31
+        urgent: false
       },
       {
         title: "Frontend Developer",
@@ -223,8 +219,7 @@ export class MemStorage implements IStorage {
         currency: "USD",
         skills: ["JavaScript", "React", "CSS", "HTML"],
         featured: false,
-        urgent: false,
-        applicationCount: 89
+        urgent: false
       },
       {
         title: "UX Researcher",
@@ -240,8 +235,7 @@ export class MemStorage implements IStorage {
         currency: "USD",
         skills: ["User Research", "Analytics", "Figma", "Testing"],
         featured: false,
-        urgent: false,
-        applicationCount: 34
+        urgent: false
       }
     ];
 
@@ -384,7 +378,7 @@ export class MemStorage implements IStorage {
       ...insertJob, 
       id, 
       createdAt: new Date(),
-      applicationCount: insertJob.applicationCount || 0,
+      applicationCount: 0,
       featured: insertJob.featured || false,
       urgent: insertJob.urgent || false,
       salaryMin: insertJob.salaryMin || null,
