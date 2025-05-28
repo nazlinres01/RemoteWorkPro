@@ -24,8 +24,8 @@ export default function Companies() {
       company.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
       company.description.toLowerCase().includes(searchQuery.toLowerCase());
     
-    const matchesIndustry = !industryFilter || company.industry.includes(industryFilter);
-    const matchesSize = !sizeFilter || company.size.includes(sizeFilter);
+    const matchesIndustry = !industryFilter || industryFilter === "all" || company.industry.includes(industryFilter);
+    const matchesSize = !sizeFilter || sizeFilter === "all" || company.size.includes(sizeFilter);
     
     return matchesSearch && matchesIndustry && matchesSize;
   });
@@ -82,7 +82,7 @@ export default function Companies() {
                   <SelectValue placeholder="Sektör" />
                 </SelectTrigger>
                 <SelectContent>
-                  <SelectItem value="">Tüm Sektörler</SelectItem>
+                  <SelectItem value="all">Tüm Sektörler</SelectItem>
                   <SelectItem value="Fintech">Fintech</SelectItem>
                   <SelectItem value="Design">Design & Branding</SelectItem>
                   <SelectItem value="Cloud">Cloud Infrastructure</SelectItem>
@@ -96,7 +96,7 @@ export default function Companies() {
                   <SelectValue placeholder="Şirket Büyüklüğü" />
                 </SelectTrigger>
                 <SelectContent>
-                  <SelectItem value="">Tüm Büyüklükler</SelectItem>
+                  <SelectItem value="all">Tüm Büyüklükler</SelectItem>
                   <SelectItem value="50">1-50 çalışan</SelectItem>
                   <SelectItem value="100">50-100 çalışan</SelectItem>
                   <SelectItem value="250">100-250 çalışan</SelectItem>

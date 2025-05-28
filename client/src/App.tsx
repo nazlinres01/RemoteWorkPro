@@ -8,6 +8,8 @@ import JobDetail from "@/pages/job-detail";
 import Companies from "@/pages/companies";
 import About from "@/pages/about";
 import Contact from "@/pages/contact";
+import SavedJobs from "@/pages/saved-jobs";
+import Profile from "@/pages/profile";
 import NotFound from "@/pages/not-found";
 
 function Router() {
@@ -18,6 +20,8 @@ function Router() {
       <Route path="/companies" component={Companies} />
       <Route path="/about" component={About} />
       <Route path="/contact" component={Contact} />
+      <Route path="/saved-jobs" component={SavedJobs} />
+      <Route path="/profile" component={Profile} />
       <Route component={NotFound} />
     </Switch>
   );

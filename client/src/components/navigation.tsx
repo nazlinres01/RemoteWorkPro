@@ -45,15 +45,19 @@ export default function Navigation() {
           <div className="flex items-center space-x-4">
             {/* Desktop actions */}
             <div className="hidden md:flex items-center space-x-4">
-              <Button variant="ghost" size="sm" className="text-slate-600 hover:text-primary">
-                <Heart className="w-5 h-5" />
-              </Button>
+              <Link href="/saved-jobs">
+                <Button variant="ghost" size="sm" className="text-slate-600 hover:text-primary">
+                  <Heart className="w-5 h-5" />
+                </Button>
+              </Link>
               <Button variant="ghost" size="sm" className="text-slate-600 hover:text-primary">
                 <Bell className="w-5 h-5" />
               </Button>
-              <Button variant="outline" size="sm">
-                Giriş Yap
-              </Button>
+              <Link href="/profile">
+                <Button variant="outline" size="sm">
+                  Profil
+                </Button>
+              </Link>
               <Button size="sm" className="btn-gradient">
                 Üye Ol
               </Button>
@@ -79,9 +83,17 @@ export default function Navigation() {
                     </a>
                   ))}
                   <div className="flex flex-col space-y-2 pt-4 border-t">
-                    <Button variant="outline" onClick={() => setIsOpen(false)}>
-                      Giriş Yap
-                    </Button>
+                    <Link href="/saved-jobs">
+                      <Button variant="ghost" className="w-full justify-start" onClick={() => setIsOpen(false)}>
+                        <Heart className="w-4 h-4 mr-2" />
+                        Kayıtlı İşler
+                      </Button>
+                    </Link>
+                    <Link href="/profile">
+                      <Button variant="outline" className="w-full" onClick={() => setIsOpen(false)}>
+                        Profil
+                      </Button>
+                    </Link>
                     <Button className="btn-gradient" onClick={() => setIsOpen(false)}>
                       Üye Ol
                     </Button>

@@ -1,5 +1,6 @@
 import { Laptop } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Link } from "wouter";
 
 export default function Footer() {
   return (
