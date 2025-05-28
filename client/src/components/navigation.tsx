@@ -2,15 +2,16 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Menu, Laptop, Heart, Bell } from "lucide-react";
+import { Link } from "wouter";
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
 
   const navItems = [
-    { href: "#jobs", label: "İş İlanları" },
-    { href: "#companies", label: "Şirketler" },
-    { href: "#about", label: "Hakkımızda" },
-    { href: "#contact", label: "İletişim" },
+    { href: "/#jobs", label: "İş İlanları" },
+    { href: "/companies", label: "Şirketler" },
+    { href: "/about", label: "Hakkımızda" },
+    { href: "/contact", label: "İletişim" },
   ];
 
   return (
@@ -19,12 +20,12 @@ export default function Navigation() {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex items-center space-x-8">
-            <div className="flex items-center space-x-2">
+            <Link href="/" className="flex items-center space-x-2">
               <div className="w-10 h-10 bg-gradient-to-r from-primary to-secondary rounded-xl flex items-center justify-center">
                 <Laptop className="text-white w-5 h-5" />
               </div>
               <span className="text-xl font-bold text-slate-800">RemoteWork Pro</span>
-            </div>
+            </Link>
 
             {/* Desktop Navigation */}
             <div className="hidden md:flex space-x-6">
