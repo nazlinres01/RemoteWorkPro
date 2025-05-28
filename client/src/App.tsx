@@ -10,6 +10,8 @@ import About from "@/pages/about";
 import Contact from "@/pages/contact";
 import SavedJobs from "@/pages/saved-jobs";
 import Profile from "@/pages/profile";
+import Register from "@/pages/register";
+import Login from "@/pages/login";
 import NotFound from "@/pages/not-found";
 
 function Router() {
@@ -22,6 +24,8 @@ function Router() {
       <Route path="/contact" component={Contact} />
       <Route path="/saved-jobs" component={SavedJobs} />
       <Route path="/profile" component={Profile} />
+      <Route path="/register" component={Register} />
+      <Route path="/login" component={Login} />
       <Route component={NotFound} />
     </Switch>
   );

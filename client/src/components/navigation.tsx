@@ -53,14 +53,16 @@ export default function Navigation() {
               <Button variant="ghost" size="sm" className="text-slate-600 hover:text-primary">
                 <Bell className="w-5 h-5" />
               </Button>
-              <Link href="/profile">
+              <Link href="/login">
                 <Button variant="outline" size="sm">
-                  Profil
+                  Giriş Yap
                 </Button>
               </Link>
-              <Button size="sm" className="btn-gradient">
-                Üye Ol
-              </Button>
+              <Link href="/register">
+                <Button size="sm" className="btn-gradient">
+                  Üye Ol
+                </Button>
+              </Link>
             </div>
 
             {/* Mobile menu trigger */}
@@ -89,14 +91,16 @@ export default function Navigation() {
                         Kayıtlı İşler
                       </Button>
                     </Link>
-                    <Link href="/profile">
+                    <Link href="/login">
                       <Button variant="outline" className="w-full" onClick={() => setIsOpen(false)}>
-                        Profil
+                        Giriş Yap
                       </Button>
                     </Link>
-                    <Button className="btn-gradient" onClick={() => setIsOpen(false)}>
-                      Üye Ol
-                    </Button>
+                    <Link href="/register">
+                      <Button className="btn-gradient w-full" onClick={() => setIsOpen(false)}>
+                        Üye Ol
+                      </Button>
+                    </Link>
                   </div>
                 </div>
               </SheetContent>
